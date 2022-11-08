@@ -1,6 +1,6 @@
 package byte_bank_composto;
 
-public class Testabanco {
+public class TestaBanco {
 
 	public static void main(String[] args) {
 		Cliente snow = new Cliente();
