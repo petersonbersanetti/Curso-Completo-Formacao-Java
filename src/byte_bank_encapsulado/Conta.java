@@ -12,6 +12,12 @@ public class Conta {
 	private Cliente titular;
 	// Cliente titular = new Cliente(); metodo para nao precisar criar
 	// (contaDaShanti.titular = new Cliente();
+	
+	public Conta(int agencia, int numero) {
+		this.agencia = agencia;
+		this.numero = numero;
+		System.out.println("SUA CONTA FOI CRIADA COM SUCESSO.s \nAgencia: " +this.agencia + " Conta: " +this.numero);
+	}
 
 	public void deposita(double valor) {
 		this.saldo += valor;
@@ -48,6 +54,10 @@ public class Conta {
 	}
 
 	public void setNumero(int novoNumero) {
+		if (numero <= 0) {
+			System.out.println("O número da conta não pode ser negativo!");
+			return;
+		}
 		this.numero = novoNumero;
 	}
 
@@ -56,6 +66,10 @@ public class Conta {
 	}
 
 	public void setAgencia(int novaAgencia) {
+		if (agencia <= 0) {
+			System.out.println("O numero da agencia nao pode ser negativo!");
+			return;
+		}
 		this.agencia = novaAgencia;
 	}
 
