@@ -16,20 +16,11 @@ public class Funcionario {
 	}
 
 	public Funcionario() {
-		
+
 	}
-	
+
 	public double getBonificacao() {
-		if (this.tipo == 0) { // 0 = Funcionário comum; 1 = Gerente; 2 = Diretor
-			System.out.println(getTipo() + " - Funcionario");
-			return this.salario * 0.1;
-		} else if (this.tipo == 1) {
-			System.out.println(getTipo() + " - Gerente");
-			return this.salario;
-		} else {
-			System.out.println(getTipo() + " - Diretor");
-			return this.salario + 1000.0;
-		}
+			return this.salario * 0.05;
 	}
 
 	public String getNome() {
