@@ -4,14 +4,32 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	private double salario;
+	protected double salario;
+	private int tipo = 0; // 0 = Funcionário comum; 1 = Gerente; 2 = Diretor
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
 
 	public Funcionario() {
 		
 	}
 	
 	public double getBonificacao() {
-		return this.salario*0.1;
+		if (this.tipo == 0) { // 0 = Funcionário comum; 1 = Gerente; 2 = Diretor
+			System.out.println(getTipo() + " - Funcionario");
+			return this.salario * 0.1;
+		} else if (this.tipo == 1) {
+			System.out.println(getTipo() + " - Gerente");
+			return this.salario;
+		} else {
+			System.out.println(getTipo() + " - Diretor");
+			return this.salario + 1000.0;
+		}
 	}
 
 	public String getNome() {
