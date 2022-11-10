@@ -7,6 +7,9 @@ public class TesteSistema {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		Cliente cliente = new Cliente();
+		cliente.setSenha(222);
+		
 		Gerente g = new Gerente();
 		System.out.println("Bom dia, Gerente, digite sua senha: ");
 		int gsenha = sc.nextInt();
@@ -18,6 +21,7 @@ public class TesteSistema {
 		adm.setSenha(admsenha);
 
 		SistemaInterno si = new SistemaInterno();
+		si.autentica(cliente);
 		si.autentica(g);
 		si.autentica(adm);
 		
