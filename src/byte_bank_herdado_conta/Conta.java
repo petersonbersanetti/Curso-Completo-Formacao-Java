@@ -14,11 +14,11 @@ public abstract class Conta {
 		this.agencia = agencia;
 		this.numero = numero;
 //		this.saldo = 100;
-		System.out.println("Estou criando uma conta " + this.numero);
+		System.out.println("Estou criando uma conta: " + this.numero + " agencia: " + this.agencia);
 	}
 
 	public abstract void deposita(double valor);
-	
+
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
