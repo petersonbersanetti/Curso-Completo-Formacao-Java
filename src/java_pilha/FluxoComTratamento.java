@@ -1,6 +1,6 @@
 package java_pilha;
 
-public class Fluxo {
+public class FluxoComTratamento {
 
 	public static void main(String[] args) {
 		System.out.println("Inicio do main");
@@ -8,7 +8,7 @@ public class Fluxo {
 		metodo1();
 		} catch (Exception ex) {
 			String error = ex.getMessage();
-			System.out.println("Error " +error);
+			System.out.println("Error" +error);
 //			ex.printStackTrace();
 		}
 		System.out.println("Fim do main");
@@ -22,8 +22,14 @@ public class Fluxo {
 
 	private static void metodo2() {
 		System.out.println("Ini do metodo 2");
-		throw new ArithmeticException("Deu Errado");
-		//System.out.println("Fim do método 2");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+			int a = i / 0;
+			Conta c = null;
+			c.deposita();
+
+		}
+		System.out.println("Fim do método 2");
 	}
 
 }
