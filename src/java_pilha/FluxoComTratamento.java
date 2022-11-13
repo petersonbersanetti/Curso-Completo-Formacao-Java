@@ -5,10 +5,10 @@ public class FluxoComTratamento {
 	public static void main(String[] args) {
 		System.out.println("Inicio do main");
 		try {
-		metodo1();
+			metodo1();
 		} catch (Exception ex) {
 			String error = ex.getMessage();
-			System.out.println("Error" +error);
+			System.out.println("Error" + error);
 //			ex.printStackTrace();
 		}
 		System.out.println("Fim do main");
