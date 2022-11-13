@@ -1,9 +1,8 @@
 package java_pilha;
 
-public class MinhaExcecao extends RuntimeException {
+public class MinhaExcecao extends Exception {
 
-	
-	public MinhaExcecao (String msg) {
-		
+	public MinhaExcecao(String msg) {
+		super(msg);
 	}
 }
