@@ -7,9 +7,9 @@ public class ContaCorrente extends Conta implements Tributavel {
 	}
 
 	@Override //definindo taxa de saque de 20 centavos atraves do polimorfismo
-	public boolean saca(double valor) {
+	public void saca(double valor) throws SaldoInsuficienteException{
 		double valorASacar = valor + 0.2;
-		return super.saca(valorASacar);
+		super.saca(valorASacar);
 	}
 
 	@Override
