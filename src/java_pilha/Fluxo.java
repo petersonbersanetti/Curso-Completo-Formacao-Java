@@ -25,6 +25,8 @@ public class Fluxo {
 	}
 
 	private static void metodo2() throws MinhaExcecao {
+		//throws na assinatura do método por ser checked diretamente a Exception
+		// sinalizando para quem chama o método, pois o mesmo é perigoso.
 		System.out.println("Ini do metodo 2");
 		int a = 2/0;
 		throw new MinhaExcecao("Deu muito Errado");
